@@ -1,3 +1,7 @@
+body {
+    padding: 0 !important;
+}
+
 .navbar-collapse a {
     color: white;
 }
@@ -7,9 +11,29 @@
 
 footer {
     text-align: center;
-    position: fixed;
-    bottom: 0;
     width: 100%;
     background-color: #dfeaff;
     padding: 20px;
+}
+
+.product-item h2 {
+    text-transform: uppercase !important;
+    font-size: 16px !important;
+    margin-bottom: 2px;
+}
+
+.product-item span {
+    margin-bottom: 5px;
+}
+.price {
+    font-weight: bold;
+}
+.product-item {
+    margin-top: 40px;
+}
+.description_product_container {
+margin: 250px auto 350px auto;
+}
+.subtitle {
+    display: block;
 }
