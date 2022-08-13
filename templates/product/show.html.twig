@@ -20,7 +20,7 @@
 					<span class="price">{{ (app_one_product.price / 100)|number_format(2, ',', '.')}}€</span>
 					<hr>
 					<p>{{ app_one_product.description }}</p>
-					<a href="" class="btn btn-primary">Ajouter au panier</a>
+					<a href="{{ path('app_add_cart', { 'id' : app_one_product.id}) }}" class="btn btn-primary">Ajouter au panier</a>
 
 				</div>
 			</div>

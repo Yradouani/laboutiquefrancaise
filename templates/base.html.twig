@@ -35,7 +35,7 @@
 	</head>
 	<body>
 		<header>
-			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark mb-5">
 				<a class="navbar-brand mx-4" href="{{ path('home') }}">La Boutique Française</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
@@ -127,7 +127,7 @@
 			{% endif %}
 
 			<!-- Marketing messaging and featurettes
-			    ================================================== -->
+						    ================================================== -->
 			<!-- Wrap the rest of the page in another container to center all the content. -->
 			<div class="container marketing {% if block('carousel') is not defined %}my-5 ms-2{% endif %}"> {% block content %}{% endblock %}
 
