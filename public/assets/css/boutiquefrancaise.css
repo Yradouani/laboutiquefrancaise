@@ -14,6 +14,7 @@ footer {
     width: 100%;
     background-color: #dfeaff;
     padding: 20px;
+    margin-top: 100px;
 }
 
 .product-item h2 {
@@ -36,4 +37,13 @@ margin: 250px auto 350px auto;
 }
 .subtitle {
     display: block;
+}
+.cart-icon {
+    color: white;
+    height: 28px;
+    margin: 0 10px;
+}
+
+.table td, .table th {
+    vertical-align: middle;
 }

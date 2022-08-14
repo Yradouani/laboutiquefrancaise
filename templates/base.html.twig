@@ -65,7 +65,11 @@
 						|
 						<a href="{{ path('register') }}" class="mx-3">Inscription</a>
 					{% endif %}
+					<a href="{{ path('app_cart') }}">
+						<img src="{{ asset('assets/img/trolley.png') }}" alt="mon panier" class="cart-icon">
+					</a>
 				</div>
+
 			</nav>
 		</header>
 
@@ -127,7 +131,7 @@
 			{% endif %}
 
 			<!-- Marketing messaging and featurettes
-						    ================================================== -->
+																								    ================================================== -->
 			<!-- Wrap the rest of the page in another container to center all the content. -->
 			<div class="container marketing {% if block('carousel') is not defined %}my-5 ms-2{% endif %}"> {% block content %}{% endblock %}
 
