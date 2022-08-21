@@ -58,7 +58,7 @@
 				<b class="my-5">Total de mon panier :
 					{{ (total / 100) |number_format(2, ',', '.') }}€
 				</b><br/>
-				<a href="" class="btn btn-success">Valider mon panier</a>
+				<a href="{{ path('app_order') }}" class="btn btn-success">Valider mon panier</a>
 			</div>
 		{% else %}
 			<hr>

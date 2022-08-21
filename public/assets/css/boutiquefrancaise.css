@@ -47,3 +47,19 @@ margin: 250px auto 350px auto;
 .table td, .table th {
     vertical-align: middle;
 }
+.small-block {
+    max-width: 600px;
+    margin: 150px auto;
+}
+.form-check {
+    background-color: #f4f8ff;
+    padding: 20px 65px;
+}
+.col-form-label, .recap-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+.recap-container {
+    background-color: #f4f8ff;
+    padding: 20px;
+}
