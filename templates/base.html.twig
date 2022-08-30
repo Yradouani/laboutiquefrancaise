@@ -13,7 +13,7 @@
 
 		<!-- Bootstrap core CSS -->
 		<link href="{{ asset('assets/css/bootstrap.min.css')}}" rel="stylesheet">
-		<link rel="stylesheet" href="{{ asset('assets/css/boutiquefrancaise.css') }}">
+		<link rel="stylesheet" href="{{ asset('assets/css/boutiquefrancaise.css') }}"> {% block javascript %}{% endblock %}
 		<style>
 			.bd-placeholder-img {
 				font-size: 1.125rem;
@@ -131,7 +131,7 @@
 			{% endif %}
 
 			<!-- Marketing messaging and featurettes
-																								    ================================================== -->
+																														    ================================================== -->
 			<!-- Wrap the rest of the page in another container to center all the content. -->
 			<div class="container marketing {% if block('carousel') is not defined %}my-5 ms-2{% endif %}"> {% block content %}{% endblock %}
 
@@ -151,4 +151,5 @@
 			<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 			<script src=" {{ asset('assets/js/bootstrap.bundle.js') }}"></script>
 		</body>
+		{% block script %}{% endblock %}
 	</html>
