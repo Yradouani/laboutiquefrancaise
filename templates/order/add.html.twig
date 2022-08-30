@@ -57,7 +57,7 @@
 					<strong>Total :</strong>
 					{{ ((total / 100) + carrier.price)|number_format(2, ',', '.') }}€
 				</span>
-				<a href="{{ path('app_stripe') }}" class="btn btn-success btn-block my-5" id="checkout-button">Payer |
+				<a href="{{ path('app_stripe', {'reference': reference}) }}" class="btn btn-success btn-block my-5" id="checkout-button">Payer |
 					{{ ((total / 100) + carrier.price)|number_format(2, ',', '.') }}€</a>
 			</div>
 		</div>
@@ -70,10 +70,15 @@
 var checkoutButton = document.getElementById("checkout-button");
 
 checkoutButton.addEventListener("click", function () {
-fetch("/commande/create-session", {method: "POST"}).then(function (response) {
+fetch("/commande/create-session/{{ reference }}", {method: "POST"}).then(function (response) {
 return response.json();
 }).then(function (session) {
-return stripe.redirectToCheckout({sessionId: session.id});
+	if(session.error == 'order'){
+		//redirection
+		window.location.replace('{{ path('app_order') }}')
+	} else {
+		return stripe.redirectToCheckout({sessionId: session.id});
+	}
 }).then(function (result) {
 
 
